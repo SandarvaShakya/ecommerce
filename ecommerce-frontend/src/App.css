@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&display=swap');
+
+:root{
+  --color-primary: #4E598C;
+  --color-secondary: #70A288;
+  --color-black: #000100;
+  --color-black-2: #0F0A0A;
+  --color-accent: #F9C784;
+
+  --padding-section-tb: 3rem;
+}
+
+/***********************---GLOBAL CSS START---******************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  line-height: 1.5;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+img,
+video{
+  max-width: 100%;
+  display: block;
+}
+
+section,
+footer{
+  padding-block: var(--padding-section-tb);
+}
+
+.container{
+  width: 90%;
+  margin-inline: auto;
+}
+
+/***********************---GLOABL CSS START---******************************/
+
+/***********************---NAVBAR CSS START---******************************/
+
+.nav{
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.nav-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  text-align: center;
+  flex: 2;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  text-align: center;
+  display: block;
+  border-radius: 8px;
+}
+
+.nav-list--front,
+.nav-list--back{
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.nav-list--front-open,
+.nav-list--back-open{
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.nav-item{
+  list-style-type: none;
+}
+
+.nav-item:hover{
+  border-bottom: 3px solid white;
+}
+
+.cart-d{
+  display: none;
+}
+
+.active{
+  border-bottom: 3px solid white;
+}
+
+@media (min-width: 720px){
+  .nav-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+  }
+
+  .cart-m{
+    display: none;
+  }
+
+  .cart-d{
+    display: block;
+  }
+
+  .nav-list--front{
+    order: 1;
+    width: 25%;
+    align-items: center;
+  }
+
+  .nav-header{
+    order: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .nav-list--back{
+    width: 15%;
+    order: 3;
+    align-items: center;
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .nav-list{
+    max-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/***********************---NAVBAR CSS END---******************************/
+
+/***********************---HERO CSS START---******************************/
+
+.hero{
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+}
+
+/***********************---HERO CSS END---******************************/
+
+/***********************---FOOTER CSS START---******************************/
+.footer{
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.footer-content{
+  padding: 0.5rem 0;
+}
+
+.footer-logo{
+  margin-bottom: 1rem;
+}
+
+.footer-item{
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.footer-item:hover{
+  cursor: pointer;
+}
+
+.copyright{
+  margin-top: 0.5rem;
+}
+
+.newsletter-heading{
+  font-size: 1.5rem;
+}
+
+.newsletter{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.newsletter input[type=text]{
+  padding: 1rem 0.55rem;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  width: 70%;
+}
+
+.newsletter input[type=text]:focus{
+  outline: 1px solid var(--color-black);
+}
+
+.newsletter input[type=button]{
+  width: 30%;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  padding: 1rem 0.55rem;
+  background-color: var(--color-black);
+  color: white;
+}
+
+.newsletter input[type=button]:hover{
+  background-color: var(--color-black-2);
+  cursor: pointer;
+}
+
+@media (min-width: 720px){
+  .footer-content__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-content{
+    width: 33%;
+  }
+
+  .footer-list{
+    padding-left: 3rem;
+  }
+}
+
+/***********************---FOOTER CSS END---******************************/
+
+@media (min-width: 720px){
+  .container{
+    width: 80%;
+    max-width: 1400px;
+  }
+}
