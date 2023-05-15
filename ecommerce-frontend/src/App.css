@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
 :root{
   --color-primary: #4E598C;
   --color-secondary: #70A288;
@@ -63,6 +63,7 @@ footer{
 .logo{
   text-align: center;
   flex: 2;
+  font-family: 'Kelly Slab', cursive;
 }
 
 .nav-link{
@@ -176,6 +177,7 @@ footer{
 
 .footer-logo{
   margin-bottom: 1rem;
+  font-family: 'Kelly Slab', cursive;
 }
 
 .footer-item{
@@ -247,5 +249,14 @@ footer{
   .container{
     width: 80%;
     max-width: 1400px;
+  }
+
+  .flex{
+    display: flex;
+  }
+
+  .flex--center{
+    justify-content: center;
+    align-items: center;
   }
 }
