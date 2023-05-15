@@ -1,6 +1,6 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import '../styles/Login.css'
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { firebaseAuth } from '../services/fire' 
 
