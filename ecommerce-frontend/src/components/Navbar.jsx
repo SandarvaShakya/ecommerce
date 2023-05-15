@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+import Signout from './Signout'
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -29,12 +31,13 @@ const Navbar = () => {
                         </Link>
                     </ul>
                     <ul className={isOpen ? "nav-list nav-list--back-open" : "nav-list nav-list--back"}>
-                        <Link to="/login" className="nav-link">
-                            <li className="nav-item">Login</li>
-                        </Link>
-                        <Link to="/signup" className="nav-link">
+                        {/* <Link to="/sign" className="nav-link">
+                            <li className="nav-item">Signout</li>
+                        </Link> */}
+                        <Signout />
+                        {/* <Link to="/signup" className="nav-link">
                             <li className="nav-item">Signup</li>
-                        </Link>
+                        </Link> */}
                         <p className="cart-d">
                             <img src="/icons/bag.svg" alt="shopping bag" />
                         </p>
