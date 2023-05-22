@@ -1,13 +1,14 @@
+import '../styles/Signout.css'
 import { signOut } from "firebase/auth"
 import { firebaseAuth } from "../services/fire"
 
-const Signout = () => {
+const Signout = ({className}) => {
   const logout= () => {
     signOut(firebaseAuth)
   }
 
   return (
-    <div onClick={logout}>Signout</div>
+    <li className={className} onClick={logout}>Signout</li>
   )
 }
 

@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Notfound from './pages/Notfound';
+import Categories from './pages/Categories';
 
 //Utils Import
 import ProtectedRoute from './utils/ProtectedRoute';
@@ -20,6 +21,7 @@ function App() {
           <Route element={<ProtectedRoute />} >
             <Route path='/' exact element={<Home />} />
             <Route path='/products' exact element={<Products />} />
+            <Route path='/categories' exact element={<Categories />} />
           </Route>
           <Route path='/login' exact element={<Login />} />
           <Route path='/signup' exact element={<Signup />} />
