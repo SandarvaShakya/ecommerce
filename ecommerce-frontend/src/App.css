@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
 :root{
   --color-primary: #4E598C;
   --color-secondary: #70A288;
@@ -16,7 +17,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 3px solid red; */
 }
 
 body{
@@ -48,6 +48,9 @@ footer{
 .nav{
   background-color: var(--color-primary);
   color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .nav-container{
@@ -58,6 +61,21 @@ footer{
 
 .hamburger img{
   width: 32px;
+}
+
+.cart{
+  position: relative;
+}
+
+.cart-number{
+  position: absolute;
+  background-color: var(--color-black);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  left: 25px;
+  top: -5px;
+  text-align: center;
 }
 
 .cart, .hamburger{
@@ -129,10 +147,6 @@ footer{
 }
 
 @media (min-width: 720px){
-  .nav{
-    position: relative;
-  }
-
   .hamburger{
     display: none;
   }
@@ -187,7 +201,6 @@ footer{
 /***********************---HERO CSS START---******************************/
 
 .hero{
-  /* min-height: 100vh; */
   background-color: var(--color-secondary);
 }
 

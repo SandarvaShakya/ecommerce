@@ -1,11 +1,14 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
 
 import Signout from './Signout'
+import { CartContext } from "../utils/CartProvider"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const currentPath = window.location.pathname.toLowerCase()
+
+    const { numberOfItems } = useContext(CartContext)
     return (
         <nav className='nav'>
             <div className="container">
@@ -31,6 +34,7 @@ const Navbar = () => {
                     <div className="nav-left">
                         <Signout className="nav-item signout signout-d"/>
                         <div className="cart">
+                            <span className="cart-number">{numberOfItems}</span>
                             <img src="/icons/bag.svg" alt="bag" />
                         </div>
                     </div>

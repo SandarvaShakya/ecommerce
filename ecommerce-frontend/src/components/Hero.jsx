@@ -1,6 +1,14 @@
+import { useContext } from 'react'
 import '../styles/Hero.css'
+import { CartContext } from '../utils/CartProvider'
 
 const Hero = () => {
+  const {numberOfItems, setNumberOfItems} = useContext(CartContext)
+
+  const increaseCart = () => {
+    setNumberOfItems(numberOfItems + 1);
+  }
+
   return (
     <div className="hero">
       <div className='container'>
@@ -36,14 +44,14 @@ const Hero = () => {
                   <li className="color-item"></li>
                   <li className="color-item"></li>
                   <li>
-                    <button className="hero-add-to-cart-m">
+                    <button className="hero-add-to-cart-m" onClick={increaseCart}>
                       <img src="/icons/bag.svg" alt="add-to-cart" />
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
-            <button className="hero-add-to-cart-d">Add to Cart</button>
+            <button className="hero-add-to-cart-d" onClick={increaseCart}>Add to Cart</button>
           </div>
         </div>
       </div>
