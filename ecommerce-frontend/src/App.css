@@ -123,6 +123,11 @@ footer{
   display: none;
 }
 
+.logo{
+  cursor: pointer;
+  font-family: 'Kelly Slab', cursive;
+}
+
 @media (min-width: 720px){
   .nav{
     position: relative;
@@ -182,7 +187,7 @@ footer{
 /***********************---HERO CSS START---******************************/
 
 .hero{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: var(--color-secondary);
 }
 
